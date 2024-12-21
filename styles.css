@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #74ebd5, #9face6);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.toggle {
+  background: #4caf50;
+  color: white;
+}
+
+button.toggle:hover {
+  background: #45a049;
+}
+
+button.delete {
+  background: #ff4d4d;
+  color: white;
+}
+
+button.delete:hover {
+  background: #e43c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li div {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+}
